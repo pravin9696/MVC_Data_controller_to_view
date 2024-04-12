@@ -1,0 +1,34 @@
+﻿@model MVC_Data_controller_to_view.Models.login
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>login1</title>
+</head>
+<body>
+	<div>
+		@Html.BeginForm("checkLogin", "GTH", FormMethod.Post)
+		<table>
+			<tr>
+				<td>User ID</td>
+				<td> @Html.TextBoxFor(x=>x.userid) </td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td>@Html.TextBoxFor(x=>x.password) </td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Submit"</td>
+			</tr>
+		</table>
+		@{
+			Html.EndForm();
+		}
+	</div>
+</body>
+</html>
